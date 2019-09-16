@@ -1,0 +1,21 @@
+<link rel="import" href="/frontend/bower_components/polymer/polymer-element.html">
+
+<dom-module id="test-template">
+    <template>
+        <div>
+            <button id="helloButton" on-click="sayHello">Say hello</button>
+            <div id="greeting">[[greeting]]</div>
+            <vaadin-combo-box label="Element"></vaadin-combo-box>
+            <vaadin-date-picker label="Label" placeholder="Placeholder">
+        </vaadin-date-picker>
+        </div>
+    </template>
+    <script>
+        class TestTemplate extends Polymer.Element {
+            static get is() {
+                return 'test-template'
+            }
+        }
+        customElements.define(TestTemplate.is, TestTemplate);
+    </script>
+</dom-module>

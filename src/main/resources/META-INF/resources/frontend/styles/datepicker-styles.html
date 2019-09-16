@@ -1,0 +1,36 @@
+<link rel="import" href="../bower_components/polymer/lib/elements/custom-style.html">
+<link rel="import" href="../bower_components/vaadin-lumo-styles/font-icons.html">
+
+
+<!--Set background color for the whole overlay-->
+<dom-module id="theme-enhanced" theme-for="vaadin-date-picker-overlay">
+    <template>
+        <style>
+            :host([theme="your-theme"]) [part~="overlay"]{
+                background-color: burlywood;
+            }
+
+        </style>
+    </template>
+</dom-module>
+
+<dom-module id="datepicker-overlay" theme-for="vaadin-date-picker-overlay-content">
+    <template>
+        <style>
+            [part="month"]{
+                background-color: pink;
+            }
+        </style>
+    </template>
+</dom-module>
+
+<!--Add a read border to a textField of a DateField-->
+<dom-module id="my-field-theme" theme-for="vaadin-text-field">
+    <template>
+        <style>
+            :host([theme="your-theme"]) [part="input-field"]{
+                border: 1px solid red;
+            }
+        </style>
+    </template>
+</dom-module>

@@ -1,5 +1,12 @@
 # Project Base for Vaadin Flow and Spring Boot
 
+Useful links for styling webcomponents in Flow 10-13:
+ * [Styling a web component part inside another web component](https://vaadin.com/forum/thread/17596415/styling-a-web-component-part-inside-another-web-component)
+ * [Theme Attribure and Subcomponents](https://github.com/vaadin/vaadin-themable-mixin/wiki/5.-Theme-Attribute-and-Subcomponents)
+ * [Vaadin Thenable mixin](https://github.com/vaadin/vaadin-themable-mixin/wiki)
+ * [Theming components - Overlay](https://vaadin.com/docs/v13/flow/theme/tutorial-theming-overlay.html)
+
+
 This project can be used as a starting point to create your own Vaadin Flow application with Spring Boot.
 It contains all the necessary configuration and some placeholder files to get you started.
 
