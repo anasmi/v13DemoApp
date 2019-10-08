@@ -1,11 +1,55 @@
 <link rel="import" href="../bower_components/polymer/lib/elements/custom-style.html">
 <link rel="import" href="../bower_components/vaadin-lumo-styles/font-icons.html">
-<dom-module id="my-grid-theme" theme-for="vaadin-combo-box">
+<dom-module id="my-cb-theme" theme-for="vaadin-combo-box">
     <template>
         <style>
             [part="toggle-button"]::before {
                 font-family: "lumo-icons";
                 content: var(--lumo-icons-dropdown);
+            }
+        </style>
+    </template>
+</dom-module>
+
+<dom-module id="my-grid-theme" theme-for="vaadin-grid">
+    <template>
+        <style>
+            :host{
+                /*--lumo-primary-color-10pct:red;*/
+            }
+            [part~="cell"].oneClass{
+                --lumo-primary-color-10pct:green !important;
+            }
+            [part~="row"][selected] [part~="cell"]{
+                background-color: yellow;
+            }
+p
+            [part~="row"][selected] [part~="cell"].oneClass{
+                background-color: blue;
+            }
+        </style>
+    </template>
+</dom-module>
+
+<link rel="import" href="../bower_components/vaadin-charts/vaadin-chart-default-theme.html">
+
+<dom-module id="css-style-example" theme-for="vaadin-chart">
+    <template>
+        <style include="vaadin-chart-default-theme">
+            :host {
+                --vaadin-charts-color-6: red;
+                --vaadin-charts-color-7: blue;
+                --vaadin-charts-color-9: #b27fd6;
+                --vaadin-charts-color-45: black;
+            }
+            /*Overwriting existing ones*/
+            .xClass{
+                --vaadin-charts-color-7: green;
+            }
+            /*Creating own rules*/
+            .highcharts-color-45 {
+                fill: var(--vaadin-charts-color-45, #2b908f);
+                stroke: var(--vaadin-charts-color-45, #2b908f);
             }
         </style>
     </template>

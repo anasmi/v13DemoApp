@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Tag("test-template")
 @HtmlImport("frontend://TestTemplate.html")
-public class TestTemplate extends PolymerTemplate<HelloWorldModel> {
+public class TestTemplate extends PolymerTemplate<TestTemplateModel> {
     private static final String EMPTY_NAME_GREETING = "Please enter your name";
 
     /**

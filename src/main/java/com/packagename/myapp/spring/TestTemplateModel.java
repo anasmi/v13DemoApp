@@ -5,7 +5,7 @@ import com.vaadin.flow.templatemodel.TemplateModel;
 /**
  * Model for the template.
  */
-public interface HelloWorldModel extends TemplateModel {
+public interface TestTemplateModel extends TemplateModel {
     /**
      * Gets user input from corresponding template page.
      *
