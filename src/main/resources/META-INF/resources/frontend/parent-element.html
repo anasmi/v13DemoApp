@@ -1,0 +1,35 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="parent-element">
+    <template>
+        <style include="shared-styles">
+            :host {
+                display: block;
+            }
+        </style>
+
+    </template>
+
+    <script>
+        class ParentElement extends Polymer.Element {
+            static get is() {
+                return 'parent-element';
+            }
+            ready(){
+                super.ready();
+                console.log("Testing");
+            }
+            printMessage(){
+                window.alert('Hello');
+                console.log('Method call');
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ParentElement.is, ParentElement);
+    </script>
+</dom-module>

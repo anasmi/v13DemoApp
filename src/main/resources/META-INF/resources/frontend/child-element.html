@@ -1,0 +1,48 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="./parent-element.html">
+
+<dom-module id="child-element">
+    <template>
+        <style include="shared-styles">
+            :host {
+                background: #eee;
+                border: 1px solid #ddd;
+                box-sizing: border-box;
+                width: 250px;
+                height: 250px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+
+        <div class="promotion">
+            <h2 id="main">Main</h2>
+            <h3 id="sub">Sub</h3>
+            <button type="button" on-click="printMessage">Click me!</button>
+        </div>
+
+    </template>
+
+    <script>
+        class ChildElement extends ParentElement {
+            static get is() {
+                return 'child-element';
+            }
+
+            ready(){
+                super.ready();
+               // super.printMessage();
+                console.log("child message")
+            }
+
+            static get properties() {
+                return {
+                    // Declare your properties here.
+                };
+            }
+        }
+        customElements.define(ChildElement.is, ChildElement);
+    </script>
+</dom-module>
